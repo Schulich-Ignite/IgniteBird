@@ -1,13 +1,6 @@
-import pygame
-import os
-
-class Bird(pygame.sprite.Sprite):
-    def __init__(self, position):
-        super().__init__()
-        self.image = pygame.image.load(os.path.join('assets', 'bird.png')).convert_alpha()
-        self.rect = self.image.get_rect(center=position)
-        self.center = position
-
+class Bird:
+    def __init__(self, rect):
+        self.rect = rect
         self.speed_x = 0
         self.speed_y = 0
         self.gravity = 0.6
