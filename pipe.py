@@ -13,11 +13,11 @@ class Pipe(pygame.sprite.Sprite):
         self.bottom = flipped
         self.rect.x = x
         self.rect.y = y
-        self.speed = 10
+        self.speed = 5
 
     def update(self):
-        self.rect.x -= 5
-        if(self.rect.x < -self.rect.width - 10):
+        self.rect.x -= self.speed
+        if(self.rect.x < -self.rect.width):
             self.rect.x = 1000
             return True
         return False
