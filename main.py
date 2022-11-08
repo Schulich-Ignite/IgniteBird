@@ -12,7 +12,6 @@ SETUP section - preparing everything before the main loop runs
 """
 pygame.init()
 
-# Global constants
 SCREEN_WIDTH = 1000
 SCREEN_HEIGHT = 800
 FRAME_RATE = 60
