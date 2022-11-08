@@ -8,16 +8,14 @@ class Bird(pygame.sprite.Sprite):
         self.rect = self.image.get_rect(center=position)
         self.center = position
 
-        self.speed_x = 0
         self.speed_y = 0
         self.gravity = 0.6
 
     def update(self):
-        self.move(self.speed_x, self.speed_y)
+        self.move(self.speed_y)
         self.speed_y += self.gravity
  
-    def move(self, x, y):
-        self.rect.x += x
+    def move(self, y):
         self.rect.y += y
  
     def jump(self):
