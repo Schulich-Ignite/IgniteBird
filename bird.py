@@ -13,14 +13,16 @@ class Bird(pygame.sprite.Sprite):
         self.speed_y = 0
         self.gravity = 0.6
 
-    # updates every game loop, applies gravity every frame
+    # updates every game loop, applies gravity to bird every frame
     def update(self):
         self.move()
         self.speed_y += self.gravity
- 
+    
+    # updates the birds y speed to make them move
     def move(self):
         self.rect.y += self.speed_y
- 
+
+    # changes the birds y speed to negative to make them move upwards
     def jump(self):
         self.speed_y = -10
 
